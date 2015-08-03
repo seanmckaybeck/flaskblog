@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Welcome to my blog!</h1>
+  <p>Below is a listing of all my posts</p>
+  <br>
+  {% for post in slugs %}
+    <p><a href="/{{ post[0] }}">{{post[1]}}</a></p>
+  {% endfor %}
+{% endblock %}
